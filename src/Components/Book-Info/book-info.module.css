@@ -1,0 +1,29 @@
+.shareBook {
+  margin: 10px 5px;
+  border: 1px solid black;
+  background-color: white;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.bookSpecs {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.publisher {
+  margin: 16px 0;
+}
+
+.buyButton {
+  width: 150px;
+  padding: 8px 16px;
+  margin: 0 auto;
+  display: block;
+}

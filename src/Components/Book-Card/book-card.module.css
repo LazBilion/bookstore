@@ -1,0 +1,45 @@
+.bookCard {
+  width: 130px;
+  max-height: 263px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 8px;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 130px;
+  height: 155px;
+  margin-bottom: 10px;
+  background-color: rgb(168, 168, 168);
+}
+
+.large {
+  width: 250px;
+  max-height: 450px;
+}
+
+.large > .image {
+  width: 250px;
+  height: 450px;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.author > svg {
+  margin-right: 16px;
+}
+
+.title {
+  margin-bottom: 10px;
+  text-align: center;
+  display: flex;
+  flex: 1;
+}

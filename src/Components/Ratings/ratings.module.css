@@ -1,0 +1,7 @@
+.ratings {
+  display: flex;
+}
+
+.ratings > * {
+  margin: 0 5px;
+}

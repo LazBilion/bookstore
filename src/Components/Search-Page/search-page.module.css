@@ -1,0 +1,55 @@
+.searchPage {
+  padding: 0 32px;
+}
+
+.searchPageHeader {
+  text-align: center;
+}
+
+.inputField {
+  margin: 0 auto;
+  display: block;
+  padding: 16px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  width: 100%;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.filter {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.filterButton {
+  margin: 0 8px;
+  outline: none;
+  border: 1px solid black;
+  border-radius: 100px;
+  background-color: white;
+  padding: 4px 8px;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.filterButton:hover {
+  background-color: grey;
+  color: white;
+}
+
+.filterButton.active {
+  background-color: rgb(69, 69, 189);
+  color: white;
+  transition: 250ms;
+}
+
+.cardContainer {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 130px);
+  grid-gap: 16px;
+  width: 100%;
+}
