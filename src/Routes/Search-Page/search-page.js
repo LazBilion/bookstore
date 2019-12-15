@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 import BookCard from "Components/Book-Card";
 import classes from "./search-page.module.css";
 import { getBooks } from "API/data";
@@ -77,6 +79,9 @@ class SearchPage extends Component {
             );
           })}
         </div>
+        <Link to="/book/add">
+          <button className={classes.addBook}>Add a new book</button>
+        </Link>
       </div>
     );
   }

@@ -1,0 +1,37 @@
+.addBookPage {
+  padding: 0 32px;
+}
+
+.addNewBookHeader {
+  text-align: center;
+}
+
+.bookDetailInputs {
+  padding: 32px 16px;
+  border: 1px solid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.serverInfoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.generalBookInfo,
+.serverBookInfo {
+  margin-top: 0;
+}
+
+.fieldRow {
+  height: 40px;
+}
+
+.successContainer {
+  color: green;
+}
+
+.errorContainer {
+  color: red;
+}

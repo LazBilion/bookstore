@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import Layout from "Components/Layout";
 import "API/data";
-import { SearchPage, BookDetailsPage } from "Routes";
+import { SearchPage, BookDetailsPage, AddBookPage } from "Routes";
 
 class App extends Component {
   render() {
@@ -11,6 +11,7 @@ class App extends Component {
       <BrowserRouter>
         <Layout>
           <Switch>
+            <Route path="/book/add" component={AddBookPage} />
             <Route path="/category/:isbn" component={BookDetailsPage} />
             <Route path={["/search", "*"]}>
               <SearchPage />
