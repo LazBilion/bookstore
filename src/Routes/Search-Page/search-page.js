@@ -2,16 +2,7 @@ import React, { Component } from "react";
 import BookCard from "Components/Book-Card";
 import classes from "./search-page.module.css";
 import { getBooks } from "API/data";
-
-const capitalize = str => str[0].toUpperCase() + str.slice(1);
-
-const transformBooks = books =>
-  books.map(function addComputedProperties(book) {
-    const year = new Date(book.published).getFullYear().toString();
-    const popularity = book.rating.toString();
-
-    return { ...book, year, popularity };
-  });
+import { capitalize, transformBooks } from "Helpers";
 
 class SearchPage extends Component {
   constructor(props) {
@@ -82,10 +73,7 @@ class SearchPage extends Component {
         <div className={classes.cardContainer}>
           {books.map(book => {
             return (
-              <BookCard
-                key={book.title}
-                book={{ img: "Image", title: book.title, stars: book.rating }}
-              />
+              <BookCard key={book.title} book={book} showTitle showRating />
             );
           })}
         </div>

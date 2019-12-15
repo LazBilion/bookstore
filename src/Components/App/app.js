@@ -1,16 +1,23 @@
 import React, { Component } from "react";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
 import Layout from "Components/Layout";
-import SearchPage from "Components/Search-Page";
 import "API/data";
-import BookDetailsPage from "Components/Book-Details-Page";
+import { SearchPage, BookDetailsPage } from "Routes";
 
 class App extends Component {
   render() {
     return (
-      <Layout>
-        {/* <SearchPage /> */}
-        <BookDetailsPage />
-      </Layout>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route path="/category/:isbn" component={BookDetailsPage} />
+            <Route path={["/search", "*"]}>
+              <SearchPage />
+            </Route>
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }

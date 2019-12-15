@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 8px;
 }
 
 .image {
@@ -19,10 +18,11 @@
 
 .large {
   width: 250px;
-  max-height: 450px;
+  max-height: unset;
+  height: auto;
 }
 
-.large > .image {
+.large > a > .image {
   width: 250px;
   height: 450px;
 }

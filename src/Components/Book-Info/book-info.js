@@ -1,24 +1,7 @@
 import React from "react";
 import classes from "./book-info.module.css";
 
-const book = {
-  isbn: "9781593275846",
-  year: 2014,
-  title: "Eloquent JavaScript, Second Edition",
-  subtitle: "A Modern Introduction to Programming",
-  author: "Marijn Haverbeke",
-  published: "2014-12-14T00:00:00.000Z",
-  publisher: "No Starch Press",
-  pages: 472,
-  description:
-    "JavaScript lies at the heart of almost every modern web application, from social apps to the newest browser-based games. Though simple for beginners to pick up and play with, JavaScript is a flexible, complex language that you can use to build full-scale applications.",
-  website: "http://eloquentjavascript.net/",
-  rating: 3,
-  categories: ["Horror"]
-};
-
-function BookInfo({ location }) {
-  // const book = location.state.book;
+function BookInfo({ book }) {
   return (
     <div className={classes.bookInfo}>
       <h2 className={classes.title}>{book.title}</h2>

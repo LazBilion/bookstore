@@ -1,0 +1,21 @@
+.bookDetailsPage {
+  padding: 32px;
+}
+
+.detailsContainer {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-items: center;
+}
+
+.bookSuggestionList {
+  display: flex;
+  flex-direction: column;
+}
+
+.bookSuggestions {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+}

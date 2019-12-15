@@ -3,12 +3,16 @@ import classes from "./book-card.module.css";
 import Ratings from "Components/Ratings";
 import PropTypes from "prop-types";
 import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const BookCard = ({ book: { img, title, stars, author }, large }) => {
+const BookCard = ({ book, large, showAuthor, showRating, showTitle }) => {
+  const { img = "Image", title, rating, author } = book;
   return (
     <div className={`${classes.bookCard} ${large ? classes.large : ""}`}>
-      <div className={classes.image}>{img}</div>
-      {!!author && (
+      <Link to={`/category/${book.isbn}`}>
+        <div className={classes.image}>{img}</div>
+      </Link>
+      {!!author && showAuthor && (
         <div className={classes.author}>
           <FaUserCircle
             size={24}
@@ -19,8 +23,8 @@ const BookCard = ({ book: { img, title, stars, author }, large }) => {
           {author}
         </div>
       )}
-      {!!title && <div className={classes.title}>{title}</div>}
-      {!!stars && <Ratings stars={stars} />}
+      {!!title && showTitle && <div className={classes.title}>{title}</div>}
+      {!!rating && showRating && <Ratings rating={rating} />}
     </div>
   );
 };
