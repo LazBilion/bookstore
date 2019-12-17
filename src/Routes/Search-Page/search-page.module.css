@@ -53,3 +53,16 @@
   grid-gap: 16px;
   width: 100%;
 }
+
+.addBookButton {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 32px;
+  align-items: center;
+  text-align: center;
+}
+
+.addBookButton > p {
+  margin-right: 8px;
+  font-size: 13px;
+}

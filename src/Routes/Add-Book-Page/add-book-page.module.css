@@ -13,6 +13,24 @@
   grid-template-columns: repeat(2, 1fr);
 }
 
+.imageImport {
+  padding-top: 25px;
+  padding-left: 80px;
+}
+
+.imageImportBox {
+  height: 100px;
+  width: 180px;
+  background-color: rgb(173, 173, 173);
+  text-align: center;
+  color: white;
+}
+
+.imageImportBox > p {
+  padding-top: 20%;
+  text-decoration: underline;
+}
+
 .serverInfoContainer {
   display: flex;
   flex-direction: column;
@@ -26,6 +44,21 @@
 
 .fieldRow {
   height: 40px;
+}
+
+.addBookButtons {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.saveButton,
+.addNewBook {
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: white;
+  outline: none;
+  padding: 4px;
 }
 
 .successContainer {

@@ -148,16 +148,24 @@ class AddBookPage extends Component {
           </div>
 
           <div className={classes.serverInfoContainer}>
-            <div className={classes.imageImport}>image import</div>
+            <div className={classes.imageImport}>
+              <div className={classes.imageImportBox}>
+                <p>Image Import</p>
+              </div>
+            </div>
             <table className={classes.serverBookInfo}>
               <tbody>{this.mapFields(serverFields)}</tbody>
             </table>
           </div>
         </div>
 
-        <div>
-          <button onClick={this.handleSave}>Save</button>
-          <button onClick={this.handleNewBook}>Add new book</button>
+        <div className={classes.addBookButtons}>
+          <button className={classes.saveButton} onClick={this.handleSave}>
+            Save
+          </button>
+          <button className={classes.addNewBook} onClick={this.handleNewBook}>
+            Add new book
+          </button>
         </div>
 
         {this.state.success && (

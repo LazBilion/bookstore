@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import BookCard from "Components/Book-Card";
 import classes from "./search-page.module.css";
 import { getBooks } from "API/data";
+import { FaPlusCircle } from "react-icons/fa";
 import { capitalize, transformBooks } from "Helpers";
 
 class SearchPage extends Component {
@@ -79,9 +80,17 @@ class SearchPage extends Component {
             );
           })}
         </div>
-        <Link to="/book/add">
-          <button className={classes.addBook}>Add a new book</button>
-        </Link>
+        <div className={classes.addBookButton}>
+          <Link to="/book/add">
+            <FaPlusCircle
+              color="white"
+              strokeWidth={40}
+              stroke="black"
+              size={22}
+            />
+          </Link>
+          <p>Add a new book</p>
+        </div>
       </div>
     );
   }
