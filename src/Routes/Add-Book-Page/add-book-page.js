@@ -59,10 +59,10 @@ class AddBookPage extends Component {
   };
 
   handleSave = () => {
-    // if (this.validateFields()) {
+    if (this.validateFields()) {
     addBook(this.state.newBook);
     this.setState({ success: true });
-    // }
+    }
   };
 
   validateFields = () => {
